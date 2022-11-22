@@ -12,16 +12,19 @@ $tel = urlencode($tel);
 $name = trim($name);
 $tel = trim($tel);
 
-if (mail("nsredmi@gmail.com",
+if (mail("magifts@mail.ru",
     "НОВОГОДНЕЕ ВИДЕОПОЗДРАВЛЕНИЕ ОТ ДЕДА МОРОЗА ПО ИМЕНИ",
     "Имя: ".$name."\n".
     "Телефон: ".$tel,
-    "From: magifts@mail.ru \r\n")
+    "From: info@webriz.ru \r\n")
 ){
-    echo "Сообщение успешно отправлено";
-} else {
-echo "При отправке сообщения возникли ошибки";
+    
+header("Location: /form/thanks.html");
+// echo ("письмо отправлено")
+}
 
+else {
+    echo ("Error");
 }
 
 // if (isset($_POST['name'])) {$phone = $_POST['name'];}
